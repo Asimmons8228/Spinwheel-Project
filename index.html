@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pop Culture Trivia!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script defer src="./main.js"></script>
-</head>
-<body>
-<div class="Spinwheel">
-<div class="container">
-<h1> Welcome to Pop Culture Trivia!</h1>
-<h2>Hosted by Aaron Simmons</h2>
-    <div class="spinButton">Spin</div>
-    <div class="wheel">
-        <div class="selection" style="--i:1;--clr:#db7093;"><span>Movies</span></div>
-        <div class="selection" style="--i:2;--clr:#0fba31;"><span>Television</span></div>
-        <div class="selection" style="--i:3;--clr:#310af4;"><span>Celebrities</span></div>
-        <div class="selection" style="--i:4;--clr:#f2850982;"><span>Music</span></div>
-    </div>
-    <div class="pointer"></div>
-    <div class="message">
-        Congratulations, you have selected the <span id="selectedCategory"></span> game. Let's Play!
+  </head>
+  <body>
+    <div class="Spinwheel">
+      <div class="container">
+        <h1>Welcome to Pop Culture Trivia!</h1>
+        <h2>Hosted by Aaron Simmons</h2>
+        <div class="spinButton">Spin</div>
+        <div class="wheel">
+          <div class="selection" style="--i: 1; --clr: #db7093">
+            <span>Movies</span>
+          </div>
+          <div class="selection" style="--i: 2; --clr: #0fba31">
+            <span>Television</span>
+          </div>
+          <div class="selection" style="--i: 3; --clr: #310af4">
+            <span>Celebrities</span>
+          </div>
+          <div class="selection" style="--i: 4; --clr: #f2850982">
+            <span>Music</span>
+          </div>
+        </div>
+        <div class="pointer"></div>
+        <div class="message">
+          Congratulations, you have selected the
+          <span id="selectedCategory"></span> game. Let's Play!
+        </div>
       </div>
-</div>
-</div>
-<div class="Triviagame" style="display: none;">
-    <div class="quiz-box">
+    </div>
+    <div class="Triviagame" style="display: none">
+      <div class="quiz-box">
         <h1>Quiz</h1>
 
         <div class="quiz">
-            <h2 id="question">question</h2>
-            <div id ="answer-buttons">
-                <div class="btn">Answer 1</div>
-                <div class="btn">Answer 2</div>
-                <div class="btn">Answer 3</div>
-                <div class="btn">Answer 4</div>
-            </div>
-        <button id="next-btn">next</button>
+          <h2 id="question">question</h2>
+          <div id="answer-buttons">
+            <div class="btn">Answer 1</div>
+            <div class="btn">Answer 2</div>
+            <div class="btn">Answer 3</div>
+            <div class="btn">Answer 4</div>
+          </div>
+          <button id="next-btn">next</button>
         </div>
-    </div>
-    <div id='button-holder' class="difficulty-selection">
+      </div>
+      <div class="difficulty-selection">
         <h3>Select Difficulty:</h3>
-        <!-- <button class="difficulty-btn" id="Easy">Easy</button>
-        <button class="difficulty-btn" id="Medium">Medium</button>
-        <button class="difficulty-btn" id="Hard">Hard</button> -->
-
-        <div class="Easy"><button>Easy</button></div>
-        <div class="Medium"><button>Medium</button></div>
-        <div class="Hard"><button>Hard</button></div>
+        <div class="difficulty-btn">
+          <button id="button-holder" class="Easy">Easy</button>
+        </div>
+        <div class="'difficulty-btn">
+          <button id="button-holder" class="Medium">Medium</button>
+        </div>
+        <div class="difficulty-btn">
+          <button id="button-holder" class="Hard">Hard</button>
+        </div>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
