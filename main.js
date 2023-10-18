@@ -906,7 +906,7 @@ nextButton.addEventListener("click", () => {
 let buttonDifficulty = document.getElementById("button-holder");
 const difficultyDisplay = document.querySelector(".difficulty-selection");
 console.log(buttonDifficulty);
-buttonDifficulty.addEventListener("click", (e) => {
+difficultyDisplay.addEventListener("click", (e) => {
   if (e.target.classList.contains("Easy")) {
     selectedDifficulty = "Easy";
     difficultyDisplay.style.display = "none";
