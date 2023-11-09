@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 body {
   display: flex;
@@ -9,13 +10,20 @@ body {
   align-items: center;
   height: 100vh;
   width: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
   background: linear-gradient(to bottom, #dda0dd, #ff69b4);
   overflow: hidden;
 }
+.Spinwheel{
+  justify-content: center;
+  align-items: center;
+}
 .container {
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,8 +38,8 @@ body {
 }
 .container .spinButton {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background: white;
   border-radius: 50%;
   z-index: 10;
@@ -39,10 +47,12 @@ body {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
+  font-size: small;
   font-weight: bold;
   color: black;
   border: 4px solidblack;
   cursor: pointer;
+  padding-bottom: 5px;
 }
 .container .spinButton::before {
   content: "";
@@ -82,16 +92,19 @@ body {
 .container .wheel .selection span {
   position: relative;
   transform: rotate(45deg);
-  font-size: 2em;
+  font-size: 1.3em;
   font-weight: bolder;
   text-align: center;
   color: white;
   text-shadow: 2px 2px 4px white;
 }
 .container h1 {
-  font-size: 1.5em;
-  position: absolute;
-  top: -80px;
+  font-size: 1.1em;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  top: -65%;
   color: #fff; /* Text color */
   text-shadow: 2px 2px 4px #fff; /* Text shadow */
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -100,9 +113,9 @@ body {
 }
 
 .container h2 {
-  font-size: 1.2em; /* Adjust font size as needed */
+  font-size: 1em; /* Adjust font size as needed */
   position: absolute;
-  top: -50px; /* Adjust the vertical position as needed */
+  top: -10%; /* Adjust the vertical position as needed */
   color: #fff; /* Text color */
   text-shadow: 2px 2px 4px #fff; /* Text shadow */
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -134,7 +147,6 @@ body {
 .quiz-box {
   background: #fff;
   width: 90%;
-  max-width: 600px;
   margin: 100px auto 0;
   border-radius: 10px;
   padding: 30px;
@@ -221,8 +233,75 @@ h1 {
 }
 .Triviagame {
   display: flex;
-  min-width: 100vh;
+  width: 100vh;
   height: 100%;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container .spinButton {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: white;
+      border-radius: 50%;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      color: black;
+      border: 4px solidblack;
+      cursor: pointer;
+    }
+     .container h1 {
+          font-size: 1.1em;
+          display: inline-flex;
+          position: relative;
+          align-items: center;
+          justify-content: center;
+          top: -80%;
+          color: #fff;
+          /* Text color */
+          text-shadow: 2px 2px 4px #fff;
+          /* Text shadow */
+          font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+          border-bottom: 2px groove #fff;
+        }
+    
+        .container h2 {
+          font-size: 1.1em;
+          /* Adjust font size as needed */
+          position: absolute;
+          top: -20%;
+          /* Adjust the vertical position as needed */
+          color: #fff;
+          /* Text color */
+          text-shadow: 2px 2px 4px #fff;
+          /* Text shadow */
+          font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+          border-bottom: 2px groove #fff;
+        }
+               .container .wheel .selection span {
+                  position: relative;
+                  transform: rotate(45deg);
+                  font-size: 1em;
+                  font-weight: bolder;
+                  text-align: center;
+                  color: white;
+                  text-shadow: 2px 2px 4px white;
+                }
 }
